@@ -1,0 +1,9 @@
+git init
+git status
+git add *
+git commit -m "something"
+git push origin master
+> password login is deprecated, using PAT login as follows
+> 1. profile photo -> settings -> developer settings -> personal access tokens -> tokens (classic)
+> 2. generate new token (classic), set note, expiration, scopes
+> 3. token only appears once, remember it
