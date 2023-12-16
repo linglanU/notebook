@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+if [ -e a.out ]
+then
+        rm a.out
+        echo "> removed original a.out..."
+fi
+clang -Wall -g $1 -o a.out
+if [ -e a.out ]
+then
+        ./a.out; rm ./a.out 
+else
+        echo "> compilaion failed..."
+fi
