@@ -64,11 +64,21 @@ void insertion_sort(int *array, int length)
         for (int i = 1; i < length; ++i) { for (int j = i; j > 0; --j) { if (array[j] <= array[j - 1]) { swap(&array[j], &array[j - 1]); }} DEBUG }
 }
 
+void shell_sort(int *array, int length)
+{
+        int N = length;
+        int h = 1;
+        while (h < N/3) { h = 3*h + 1; }
+        while (h >= 1) { for (int i = h; i < N; ++i) { for (int j = i; j >= h && array[j] <= array[j - h]; j -= h) { swap(&array[j], &array[j - h]); }} DEBUG
+                         h = h/3;}
+}
+
 void sort(int *array, int length)
 {
         // normal_sort(array, length);
         // selection_sort(array, length);
-        insertion_sort(array, length);
+        // insertion_sort(array, length);
+        shell_sort(array, length);
 }
 
 void test_sort(void)

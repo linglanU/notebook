@@ -1,0 +1,5 @@
+1.
+touch git_config then mv git_config git_usage
+git commit
+remote exists both file
+git_config should not exist
