@@ -1,0 +1,73 @@
+#!/usr/bin/bash
+
+# no output
+# `command 1>/dev/null 2>&1`
+# stdout to null, stderr follows stdout
+# [`2>&1` referece](https://unix.stackexchange.com/questions/267536/why-we-need-to-have-21-in-dev-null-21)
+
+# search for something
+# `dnf search gimp 2>dev/null | head -20`
+
+cd
+
+# prompt, fedora style
+echo -e "\n# config\nPS1='[\u@\h \W]\$ '" >>~/.bashrc
+
+# web connetion
+## clash, v2rayA
+
+# key remap
+## keyd
+
+# font
+## 'CHNO Pixel Code Pro', Zpix
+
+# wallpaper
+
+# desktop
+# xmonad
+
+# xmonad config
+# [Mod] Alt
+# [Mod Shift Enter] open terminal in new window
+# [Mod Shift C] close current window
+# [Mod J/K] next/last window
+# [Mod H/L] 扩大/缩小 current window 
+# [Mod Space] switch layout
+# [Mod ,/.] switch layout
+# [Mod Shift J/K] move focus (current window)
+# [Mod Shift Q] quit monad
+# dmenu installed [Mod P] search for and use software in new window using a title bar
+# [Mod 1-9] switch between 9 workspaces
+# [Mod Shift 1-9] move focus to workspace
+# ghc-xmonad-contrib installed
+# modify ~/.config/xmonad/xmonad.hs then [Mod Q] to reload xmonad
+# haskell need space not tab, using `set expandtab`
+# [tab to space reference](https://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces)
+
+# vim search and replace 
+# `:%s/apple/banana/g`
+# % same as 1,$
+# . current line
+
+# install
+# if ubuntu, use apt
+sudo dnf install neovim \
+                 ffmpeg \
+                 clang gcc \
+                 ghc \
+                 gimp krita inkscape \
+                 aegisub \
+                 blender \
+                 obs-studio \
+                 git \
+                 p7zip \ # 7z
+                 net-tools \ # ifconfig
+                 # ... 
+                 -y
+
+# nvim config
+## mkdir -p ~/.config/nvim
+## touch ~/.config/nvim/init.vim
+echo -e "set number\nset cursorline" >>~/.config/nvim/init.vim
+
